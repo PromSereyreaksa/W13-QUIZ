@@ -3,6 +3,8 @@ import '../../data/mock_grocery_repository.dart';
 import '../../models/grocery.dart';
 import 'grocery_form.dart';
 
+enum ClassroomTab { groceriesTab, searchTab }
+
 class GroceryList extends StatefulWidget {
   const GroceryList({super.key});
 
@@ -11,7 +13,6 @@ class GroceryList extends StatefulWidget {
 }
 
 class _GroceryListState extends State<GroceryList> {
-
   void onCreate() async {
     // Navigate to the form screen using the Navigator push
     Grocery? newGrocery = await Navigator.push<Grocery>(
